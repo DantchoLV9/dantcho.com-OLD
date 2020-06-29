@@ -1,14 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Dantcho`,
+    menuLinks: [
+      {
+        name: "home",
+        link: "/",
+      },
+      {
+        name: "Test Page",
+        link: "/test",
+      },
+    ],
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Yordan Hristov (Dantcho)`,
+      summary: `This is a summary`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog about the things I love`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `dantcholv9`,
     },
   },
   plugins: [
