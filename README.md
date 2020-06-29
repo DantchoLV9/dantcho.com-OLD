@@ -1,4 +1,4 @@
-<h1 style="text-align:center">Personal Website</h1>
+Personal Website
 
 This is my personal website made with Gatsby's starter blog. I'm still working on it and it's far from completed.
 
