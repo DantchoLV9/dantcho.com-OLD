@@ -1,4 +1,4 @@
-Personal Website
+# Personal Website
 
 This is my personal website made with Gatsby's starter blog. I'm still working on it and it's far from completed.
 
