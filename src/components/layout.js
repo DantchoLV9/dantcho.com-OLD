@@ -1,11 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./navbar"
-
-import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
+  const [classNames, setClassNames] = useState('')
+  const updateClasses = (classNames) => {
+    setClassNames(classNames)
+  }
   const data = useStaticQuery(graphql`
     {
       site {
@@ -20,8 +22,8 @@ const Layout = ({ location, title, children }) => {
   `)
   return (
     <div>
-      <Navbar pages={ data.site.siteMetadata.menuLinks } />
-      <main>{children}</main>
+      <Navbar pages={ data.site.siteMetadata.menuLinks } updateClassNames={updateClasses} />
+      <main className={classNames}>{children}</main>
     </div>
   )
 }
