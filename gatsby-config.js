@@ -76,7 +76,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/favicon-black.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -84,6 +84,14 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        cssLoaderOptions: {
+          camelCase: true
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
