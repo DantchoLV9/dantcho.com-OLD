@@ -4,8 +4,8 @@ import Navbar from "./navbar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const [classNames, setClassNames] = useState('')
-  const updateClasses = (classNames) => {
+  const [classNames, setClassNames] = useState("")
+  const updateClasses = classNames => {
     setClassNames(classNames)
   }
   const data = useStaticQuery(graphql`
@@ -22,7 +22,10 @@ const Layout = ({ location, title, children }) => {
   `)
   return (
     <div>
-      <Navbar pages={ data.site.siteMetadata.menuLinks } updateClassNames={updateClasses} />
+      <Navbar
+        pages={data.site.siteMetadata.menuLinks}
+        updateClassNames={updateClasses}
+      />
       <main className={classNames}>{children}</main>
     </div>
   )
