@@ -4,7 +4,7 @@ import Navbar from "./navbar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const [classNames, setClassNames] = useState("")
+  const [classNames, setClassNames] = useState(null)
   const updateClasses = classNames => {
     setClassNames(classNames)
   }
@@ -24,6 +24,7 @@ const Layout = ({ location, title, children }) => {
     <div>
       <Navbar
         pages={data.site.siteMetadata.menuLinks}
+        classNames={classNames}
         updateClassNames={updateClasses}
       />
       <main className={classNames}>{children}</main>

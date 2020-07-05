@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../styling/navbar.module.less"
+import styles from "../styles/navbar.module.less"
 
 const BurgerButton = props => {
   return (
