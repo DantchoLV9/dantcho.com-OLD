@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Navbar from "./navbar/navbar"
 
 const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
   const [classNames, setClassNames] = useState(null)
   const updateClasses = classNames => {
     setClassNames(classNames)
@@ -26,6 +25,7 @@ const Layout = ({ location, title, children }) => {
         pages={data.site.siteMetadata.menuLinks}
         classNames={classNames}
         updateClassNames={updateClasses}
+        pathName={location.pathname}
       />
       <main className={classNames}>{children}</main>
     </div>

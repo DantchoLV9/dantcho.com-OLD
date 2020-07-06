@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import styles from "./navbar.module.less"
+import NavbarLink from "./navbarLink"
 import BurgerButton from "./BurgerButton"
 
 class Navbar extends React.Component {
@@ -28,7 +28,7 @@ class Navbar extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.navbarState != this.state.navbarState) {
+    if (prevState.navbarState !== this.state.navbarState) {
       this.toggleContent()
     }
   }
@@ -57,16 +57,13 @@ class Navbar extends React.Component {
           style={{ top: `${this.state.navbarHeight}px` }}
         >
           {this.props.pages.map((page, index) => (
-            <Link
+            <NavbarLink
               key={page.name}
-              className={`${styles.navLink} ${styles.navLinkHoverEffect} ${
-                this.state.navbarState ? styles.navAnimate : ""
-              }`}
-              style={{ animationDelay: `${index / 7 + 0.5}s` }}
-              to={page.link}
-            >
-              {page.name}
-            </Link>
+              page={page}
+              index={index}
+              navbarState={this.state.navbarState}
+              pathName={this.props.pathName}
+            />
           ))}
         </div>
         <BurgerButton
