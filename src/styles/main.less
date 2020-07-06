@@ -1,0 +1,33 @@
+@import "./variables.less";
+
+// Reset Browser Specific Styling
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: lighten(@main-blue, 35%);
+}
+
+*::-moz-selection {
+  background: lighten(@main-blue, 35%);
+}
+
+// Focused Input Fields Styling
+input[type="search"]:focus {
+  outline: none;
+  border: 1px solid @main-black;
+}
+
+// Font & Default Colors
+body {
+  background-color: @main-white;
+  color: @main-black;
+
+  a {
+    color: @main-black;
+  }
+}

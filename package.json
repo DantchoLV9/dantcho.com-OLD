@@ -2,10 +2,10 @@
   "name": "dantcho-personal-website",
   "private": true,
   "description": "My custom instance of Gatsby's started blog for my personal website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Yordan Hristov (Dantcho) <dantcho.bg@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/DantchoLV9/dantcho.com/issues"
   },
   "dependencies": {
     "gatsby": "^2.23.10",

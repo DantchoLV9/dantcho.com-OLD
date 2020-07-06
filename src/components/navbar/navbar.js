@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from "./styles/navbar.module.less"
-import BurgerButton from "./navbar/BurgerButton"
+import styles from "./navbar.module.less"
+import BurgerButton from "./BurgerButton"
 
 class Navbar extends React.Component {
   constructor(props) {

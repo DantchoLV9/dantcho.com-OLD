@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Navbar from "./navbar"
+import Navbar from "./navbar/navbar"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
