@@ -1,8 +1,13 @@
 import Typography from "typography"
 
-const typography = new Typography ({  
+const typography = new Typography({
   headerFontFamily: ["Nunito"],
-  bodyFontFamily: ["Nunito"]
+  bodyFontFamily: ["Nunito"],
+  overrideStyles: () => ({
+    html: {
+      overflowY: "initial",
+    },
+  }),
 })
 
 // Hot reload typography in development.
