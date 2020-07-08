@@ -1,7 +1,7 @@
 {
   "name": "dantcho-personal-website",
   "private": true,
-  "description": "My custom instance of Gatsby's started blog for my personal website",
+  "description": "My website made with Gatsby's starter blog",
   "version": "1.0.0",
   "author": "Yordan Hristov (Dantcho) <dantcho.bg@gmail.com>",
   "bugs": {
