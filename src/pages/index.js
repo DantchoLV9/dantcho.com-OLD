@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article className={styles.postItem} key={node.fields.slug}>
-            <h3 className={styles.postTitle}>{title}</h3>
+            <h2 className={styles.postTitle}>{title}</h2>
             <Link className={styles.postLink} to={node.fields.slug}>
               Read
             </Link>

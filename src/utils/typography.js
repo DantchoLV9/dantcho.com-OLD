@@ -3,7 +3,6 @@ import Typography from "typography"
 const typography = new Typography({
   headerFontFamily: ["Nunito"],
   bodyFontFamily: ["Nunito"],
-  blockMarginBottom: 0,
   overrideStyles: () => ({
     html: {
       overflowY: "initial",
